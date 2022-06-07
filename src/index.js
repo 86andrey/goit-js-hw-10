@@ -22,8 +22,7 @@ function onSearch(e) {
 function renderUserList(users) {
   if (users.length >= 10) {
     Notify.info(`Too many matches found. Please enter a more specific name.`);
-  }
-  if (1 < users.length < 10) {
+  } else if (1 < users.length < 10) {
     const markup = users
       .map(({ name, flags }) => {
         return `<li><p><img style="width: 30px; margin-right: 20px" src="${flags.svg}">${name.official}</p></li>`;
@@ -45,6 +44,7 @@ function renderUserList(users) {
       })
       .join('');
     countryInfo.insertAdjacentHTML('beforeend', countryOnly);
+    countryList.innerHTML = '';
   }
 }
 function onErrorCountry(error) {
