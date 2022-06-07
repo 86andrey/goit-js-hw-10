@@ -1,4 +1,3 @@
-export default { fetchUsers };
 function fetchUsers(name) {
   return fetch(
     `https://restcountries.com/v3.1/name/${name}?fields=name,capital,population,flags,languages`
@@ -9,3 +8,4 @@ function fetchUsers(name) {
     return response.json();
   });
 }
+export default { fetchUsers };
