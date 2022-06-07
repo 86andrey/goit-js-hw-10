@@ -49,5 +49,4 @@ function renderUserList(users) {
 }
 function onErrorCountry(error) {
   Notify.warning('Oops, there is no country with that name');
-  console.log(1011);
 }
